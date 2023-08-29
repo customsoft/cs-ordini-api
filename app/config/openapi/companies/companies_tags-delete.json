@@ -1,0 +1,52 @@
+{
+  "summary": "Delete companies_tags",
+  "delete": {
+    "tags": [
+      "companies_tags"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to delete a record ",
+    "operationId": "companies_tags-delete",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idCompanyTag": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "companiesTagsId",
+        "in": "path",
+        "description": "companiesTagsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "summary": "List associates_sanctions",
+  "get": {
+    "tags": [
+      "associates_sanctions"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "associates_sanctions-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "associates_sanctions": {
+                  "type": "array",
+                  "items": {
+                    "idAssociateSanction": {
+                      "type": "integer"
+                    },
+                    "idAssociate": {
+                      "type": "integer"
+                    },
+                    "dateSanction": {
+                      "type": "string"
+                    },
+                    "reasonSanction": {
+                      "type": "string"
+                    },
+                    "idTypeSanction": {
+                      "type": "integer"
+                    },
+                    "startSanction": {
+                      "type": "string"
+                    },
+                    "endSanction": {
+                      "type": "string"
+                    },
+                    "daysSanction": {
+                      "type": "integer"
+                    },
+                    "startPublication": {
+                      "type": "string"
+                    },
+                    "endPublication": {
+                      "type": "string"
+                    },
+                    "daysPublication": {
+                      "type": "integer"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesSanctionsId",
+        "in": "path",
+        "description": "associatesSanctionsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

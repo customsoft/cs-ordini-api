@@ -1,0 +1,78 @@
+{
+  "summary": "List log_searches",
+  "get": {
+    "tags": [
+      "log_searches"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "log_searches-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "log_searches": {
+                  "type": "array",
+                  "items": {
+                    "idInfoSearch": {
+                      "type": "string"
+                    },
+                    "idAssociation": {
+                      "type": "integer"
+                    },
+                    "search": {
+                      "type": "string"
+                    },
+                    "numberSearch": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "logSearchesId",
+        "in": "path",
+        "description": "logSearchesId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "summary": "Add users_logins",
+  "post": {
+    "tags": [
+      "users_logins"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "users_logins-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idUserLogin": {
+                  "type": "string"
+                },
+                "successLogin": {
+                  "type": "integer"
+                },
+                "idUser": {
+                  "type": "integer"
+                },
+                "userName": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "ipAddress": {
+                  "type": "string"
+                },
+                "userAgent": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "successLogin": {
+                "type": "integer"
+              },
+              "idUser": {
+                "type": "integer"
+              },
+              "userName": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "ipAddress": {
+                "type": "string"
+              },
+              "userAgent": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

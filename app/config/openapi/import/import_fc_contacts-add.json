@@ -1,0 +1,94 @@
+{
+  "summary": "Add import_fc_contacts",
+  "post": {
+    "tags": [
+      "import_fc_contacts"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "import_fc_contacts-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idImportFCContact": {
+                  "type": "string"
+                },
+                "idImportFC": {
+                  "type": "string"
+                },
+                "tipoRecapito": {
+                  "type": "string"
+                },
+                "recapito": {
+                  "type": "string"
+                },
+                "annotazione": {
+                  "type": "string"
+                },
+                "idValutazione": {
+                  "type": "integer"
+                },
+                "idOperatore": {
+                  "type": "string"
+                },
+                "dataModifica": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idImportFC": {
+                "type": "string"
+              },
+              "tipoRecapito": {
+                "type": "string"
+              },
+              "recapito": {
+                "type": "string"
+              },
+              "annotazione": {
+                "type": "string"
+              },
+              "idValutazione": {
+                "type": "integer"
+              },
+              "idOperatore": {
+                "type": "string"
+              },
+              "dataModifica": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

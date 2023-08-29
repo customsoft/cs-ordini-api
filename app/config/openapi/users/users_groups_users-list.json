@@ -1,0 +1,81 @@
+{
+  "summary": "List users_groups_users",
+  "get": {
+    "tags": [
+      "users_groups_users"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "users_groups_users-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "users_groups_users": {
+                  "type": "array",
+                  "items": {
+                    "idUserGroupUser": {
+                      "type": "integer"
+                    },
+                    "idUser": {
+                      "type": "integer"
+                    },
+                    "idUserGroup": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "usersGroupsUsersId",
+        "in": "path",
+        "description": "usersGroupsUsersId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "summary": "Delete associates_address_types",
+  "delete": {
+    "tags": [
+      "associates_address_types"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to delete a record ",
+    "operationId": "associates_address_types-delete",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateAddressType": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesAddressTypesId",
+        "in": "path",
+        "description": "associatesAddressTypesId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "application": {
+    "name": "csOrdiniAPI",
+    "baseUri": "APP_PATH/",
+    "appDir": "APP_PATH/",
+    "controllersDir": "APP_PATH/controllers/",
+    "libraryDir": "APP_PATH/library/",
+    "modelsDir": "APP_PATH/models/",
+    "migrationsDir": "APP_PATH/migrations/",
+    "pluginsDir": "APP_PATH/plugins/",
+    "sqlDir": "BASE_PATH/storage/sql/",
+    "tasksDir": "APP_PATH/tasks/",
+    "viewsDir": "APP_PATH/views/"
+  },
+  "cache": {
+    "enabled": true,
+    "cacheDir": "BASE_PATH/storage/cache/",
+    "type": "redis",
+    "lifetime": 3600,
+    "adapter": "File"
+  },
+  "constants": {
+    "required": []
+  },
+  "database": {
+    "adapter": "Mysql",
+    "host": "localhost",
+    "username": "alan",
+    "password": "Padoan",
+    "dbname": "cs_ordini",
+    "charset": "utf8"
+  },
+  "ldap": {
+    "server": "ldap://your_ldap_server_ip",
+    "port": "389",
+    "user": "",
+    "pass": "",
+    "baseDn": "dc=mydomain,dc=local"
+  },
+  "log": {
+    "logDir": "BASE_PATH/storage/logs/",
+    "level": "debug"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "auth": ""
+  },
+  "session": {
+    "name": "cs-o-sess",
+    "lifetime": 3600
+  },
+  "service": {}
+}

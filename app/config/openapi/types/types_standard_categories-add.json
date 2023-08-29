@@ -1,0 +1,70 @@
+{
+  "summary": "Add types_standard_categories",
+  "post": {
+    "tags": [
+      "types_standard_categories"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "types_standard_categories-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idTypeStandardCategory": {
+                  "type": "integer"
+                },
+                "typeStandardCategory": {
+                  "type": "string"
+                },
+                "readOnly": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "typeStandardCategory": {
+                "type": "string"
+              },
+              "readOnly": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

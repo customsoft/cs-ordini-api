@@ -1,0 +1,37 @@
+{
+  "summary": "Status",
+  "get": {
+    "tags": [
+      "auth"
+    ],
+    "description": "Status del login dalle API",
+    "operationId": "status",
+    "responses": {
+      "200": {
+        "description": "Status login",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "logged": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    }
+  }
+}

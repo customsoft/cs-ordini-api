@@ -1,0 +1,118 @@
+{
+  "summary": "Add associates_contacts",
+  "post": {
+    "tags": [
+      "associates_contacts"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "associates_contacts-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateContact": {
+                  "type": "string"
+                },
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "numberOnly": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idAssociate": {
+                "type": "integer"
+              },
+              "contact": {
+                "type": "string"
+              },
+              "numberOnly": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,871 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "cs-ordini API",
+    "description": "Interfaccia per accedere ai dati di cs-ordini.",
+    "contact": {
+      "name": "cs-ordini API Admin",
+      "email": "posta@marcozordan.it"
+    },
+    "version": "1.0.0"
+  },
+  "host": "[[DOMAIN]]",
+  "basePath": "/",
+  "components": {
+    "$ref": "components.json"
+  },
+  "paths": {
+    "/login": {
+      "$ref": "auth/login.json"
+    },
+    "/logout": {
+      "$ref": "auth/logout.json"
+    },
+    "/status": {
+      "$ref": "auth/status.json"
+    },
+    "/associates_contacts-add": {
+      "$ref": "associates/associates_contacts-add.json"
+    },
+    "/associates_contacts-get/{contactId}": {
+      "$ref": "associates/associates_contacts-get.json"
+    },
+    "/associates_contacts-update": {
+      "$ref": "associates/associates_contacts-update.json"
+    },
+    "/associates_contacts-delete/{contactId}": {
+      "$ref": "associates/associates_contacts-delete.json"
+    },
+    "/associates_contacts-list": {
+      "$ref": "associates/associates_contacts-list.json"
+    },
+    "/associates_contacts_types-add": {
+      "$ref": "associates/associates_contacts_types-add.json"
+    },
+    "/associates_contacts_types-get/{typeId}": {
+      "$ref": "associates/associates_contacts_types-get.json"
+    },
+    "/associates_contacts_types-update": {
+      "$ref": "associates/associates_contacts_types-update.json"
+    },
+    "/associates_contacts_types-delete/{typeId}": {
+      "$ref": "associates/associates_contacts_types-delete.json"
+    },
+    "/associates_contacts_types-list": {
+      "$ref": "associates/associates_contacts_types-list.json"
+    },
+    "/associates_date_sends-add": {
+      "$ref": "associates/associates_date_sends-add.json"
+    },
+    "/associates_date_sends-get/{sendId}": {
+      "$ref": "associates/associates_date_sends-get.json"
+    },
+    "/associates_date_sends-update": {
+      "$ref": "associates/associates_date_sends-update.json"
+    },
+    "/associates_date_sends-delete/{sendId}": {
+      "$ref": "associates/associates_date_sends-delete.json"
+    },
+    "/associates_date_sends-list": {
+      "$ref": "associates/associates_date_sends-list.json"
+    },
+    "/associates_deliberations-add": {
+      "$ref": "associates/associates_deliberations-add.json"
+    },
+    "/associates_deliberations-get/{deliberationId}": {
+      "$ref": "associates/associates_deliberations-get.json"
+    },
+    "/associates_deliberations-update": {
+      "$ref": "associates/associates_deliberations-update.json"
+    },
+    "/associates_deliberations-delete/{deliberationId}": {
+      "$ref": "associates/associates_deliberations-delete.json"
+    },
+    "/associates_deliberations-list": {
+      "$ref": "associates/associates_deliberations-list.json"
+    },
+    "/associates_details-add": {
+      "$ref": "associates/associates_details-add.json"
+    },
+    "/associates_details-get/{detailId}": {
+      "$ref": "associates/associates_details-get.json"
+    },
+    "/associates_details-update": {
+      "$ref": "associates/associates_details-update.json"
+    },
+    "/associates_details-delete/{detailId}": {
+      "$ref": "associates/associates_details-delete.json"
+    },
+    "/associates_details-list": {
+      "$ref": "associates/associates_details-list.json"
+    },
+    "/associates_disciplinary_proceedings-add": {
+      "$ref": "associates/associates_disciplinary_proceedings-add.json"
+    },
+    "/associates_disciplinary_proceedings-get/{proceedingId}": {
+      "$ref": "associates/associates_disciplinary_proceedings-get.json"
+    },
+    "/associates_disciplinary_proceedings-update": {
+      "$ref": "associates/associates_disciplinary_proceedings-update.json"
+    },
+    "/associates_disciplinary_proceedings-delete/{proceedingId}": {
+      "$ref": "associates/associates_disciplinary_proceedings-delete.json"
+    },
+    "/associates_disciplinary_proceedings-list": {
+      "$ref": "associates/associates_disciplinary_proceedings-list.json"
+    },
+    "/associates_professions-add": {
+      "$ref": "associates/associates_professions-add.json"
+    },
+    "/associates_professions-get/{professionId}": {
+      "$ref": "associates/associates_professions-get.json"
+    },
+    "/associates_professions-update": {
+      "$ref": "associates/associates_professions-update.json"
+    },
+    "/associates_professions-delete/{professionId}": {
+      "$ref": "associates/associates_professions-delete.json"
+    },
+    "/associates_professions-list": {
+      "$ref": "associates/associates_professions-list.json"
+    },
+    "/associates_quotas-add": {
+      "$ref": "associates/associates_quotas-add.json"
+    },
+    "/associates_quotas-get/{quotaId}": {
+      "$ref": "associates/associates_quotas-get.json"
+    },
+    "/associates_quotas-update": {
+      "$ref": "associates/associates_quotas-update.json"
+    },
+    "/associates_quotas-delete/{quotaId}": {
+      "$ref": "associates/associates_quotas-delete.json"
+    },
+    "/associates_quotas-list": {
+      "$ref": "associates/associates_quotas-list.json"
+    },
+    "/associates_sanctions-add": {
+      "$ref": "associates/associates_sanctions-add.json"
+    },
+    "/associates_sanctions-get/{sanctionId}": {
+      "$ref": "associates/associates_sanctions-get.json"
+    },
+    "/associates_sanctions-update": {
+      "$ref": "associates/associates_sanctions-update.json"
+    },
+    "/associates_sanctions-delete/{sanctionId}": {
+      "$ref": "associates/associates_sanctions-delete.json"
+    },
+    "/associates_sanctions-list": {
+      "$ref": "associates/associates_sanctions-list.json"
+    },
+    "/associates_sections_codes-add": {
+      "$ref": "associates/associates_sections_codes-add.json"
+    },
+    "/associates_sections_codes-get/{codeId}": {
+      "$ref": "associates/associates_sections_codes-get.json"
+    },
+    "/associates_sections_codes-update": {
+      "$ref": "associates/associates_sections_codes-update.json"
+    },
+    "/associates_sections_codes-delete/{codeId}": {
+      "$ref": "associates/associates_sections_codes-delete.json"
+    },
+    "/associates_sections_codes-list": {
+      "$ref": "associates/associates_sections_codes-list.json"
+    },
+    "/associates_studies-add": {
+      "$ref": "associates/associates_studies-add.json"
+    },
+    "/associates_studies-get/{studyId}": {
+      "$ref": "associates/associates_studies-get.json"
+    },
+    "/associates_studies-update": {
+      "$ref": "associates/associates_studies-update.json"
+    },
+    "/associates_studies-delete/{studyId}": {
+      "$ref": "associates/associates_studies-delete.json"
+    },
+    "/associates_studies-list": {
+      "$ref": "associates/associates_studies-list.json"
+    },
+    "/associates-add": {
+      "$ref": "associates/associates-add.json"
+    },
+    "/associates-get": {
+      "$ref": "associates/associates-get.json"
+    },
+    "/associates-delete": {
+      "$ref": "associates/associates-delete.json"
+    },
+    "/associates-update": {
+      "$ref": "associates/associates-update.json"
+    },
+    "/associates-list": {
+      "$ref": "associates/associates-list.json"
+    },
+    "/associations/associations-add": {
+      "$ref": "associations/associations-add.json"
+    },
+    "/associations/associations-get/{associationId}": {
+      "$ref": "associations/associations-get.json"
+    },
+    "/associations/associations-update": {
+      "$ref": "associations/associations-update.json"
+    },
+    "/associations/associations-delete/{associationId}": {
+      "$ref": "associations/associations-delete.json"
+    },
+    "/associations/associations-list": {
+      "$ref": "associations/associations-list.json"
+    },
+    "/associations/associations_contacts-add": {
+      "$ref": "associations/associations_contacts-add.json"
+    },
+    "/associations/associations_contacts-get/{contactId}": {
+      "$ref": "associations/associations_contacts-get.json"
+    },
+    "/associations/associations_contacts-update": {
+      "$ref": "associations/associations_contacts-update.json"
+    },
+    "/associations/associations_contacts-delete/{contactId}": {
+      "$ref": "associations/associations_contacts-delete.json"
+    },
+    "/associations/associations_contacts-list": {
+      "$ref": "associations/associations_contacts-list.json"
+    },
+    "/chapters/chapters-add": {
+      "$ref": "chapters/chapters-add.json"
+    },
+    "/chapters/chapters-get/{chapterId}": {
+      "$ref": "chapters/chapters-get.json"
+    },
+    "/chapters/chapters-update": {
+      "$ref": "chapters/chapters-update.json"
+    },
+    "/chapters/chapters-delete/{chapterId}": {
+      "$ref": "chapters/chapters-delete.json"
+    },
+    "/chapters/chapters-list": {
+      "$ref": "chapters/chapters-list.json"
+    },
+    "/companies/companies-add": {
+      "$ref": "companies/companies-add.json"
+    },
+    "/companies/companies-get/{companyId}": {
+      "$ref": "companies/companies-get.json"
+    },
+    "/companies/companies-update": {
+      "$ref": "companies/companies-update.json"
+    },
+    "/companies/companies-delete/{companyId}": {
+      "$ref": "companies/companies-delete.json"
+    },
+    "/companies/companies-list": {
+      "$ref": "companies/companies-list.json"
+    },
+    "/companies_address-add": {
+      "$ref": "companies/companies_address-add.json"
+    },
+    "/companies_address-get/{addressId}": {
+      "$ref": "companies/companies_address-get.json"
+    },
+    "/companies_address-update": {
+      "$ref": "companies/companies_address-update.json"
+    },
+    "/companies_address-delete/{addressId}": {
+      "$ref": "companies/companies_address-delete.json"
+    },
+    "/companies_address-list": {
+      "$ref": "companies/companies_address-list.json"
+    },
+    "/companies_tags-add": {
+      "$ref": "companies/companies_tags-add.json"
+    },
+    "/companies_tags-get/{tagId}": {
+      "$ref": "companies/companies_tags-get.json"
+    },
+    "/companies_tags-update": {
+      "$ref": "companies/companies_tags-update.json"
+    },
+    "/companies_tags-delete/{tagId}": {
+      "$ref": "companies/companies_tags-delete.json"
+    },
+    "/companies_tags-list": {
+      "$ref": "companies/companies_tags-list.json"
+    },
+    "/councilors-add": {
+      "$ref": "councilors/councilors-add.json"
+    },
+    "/councilors-get/{councilorId}": {
+      "$ref": "councilors/councilors-get.json"
+    },
+    "/councilors-update": {
+      "$ref": "councilors/councilors-update.json"
+    },
+    "/councilors-delete/{councilorId}": {
+      "$ref": "councilors/councilors-delete.json"
+    },
+    "/councilors-list": {
+      "$ref": "councilors/councilors-list.json"
+    },
+    "/documents_templates-add": {
+      "$ref": "documents/documents_templates-add.json"
+    },
+    "/documents_templates-get/{templateId}": {
+      "$ref": "documents/documents_templates-get.json"
+    },
+    "/documents_templates-update": {
+      "$ref": "documents/documents_templates-update.json"
+    },
+    "/documents_templates-delete/{templateId}": {
+      "$ref": "documents/documents_templates-delete.json"
+    },
+    "/documents_templates-list": {
+      "$ref": "documents/documents_templates-list.json"
+    },
+    "/documents_templates_text-add": {
+      "$ref": "documents/documents_templates_text-add.json"
+    },
+    "/documents_templates_text-get/{textId}": {
+      "$ref": "documents/documents_templates_text-get.json"
+    },
+    "/documents_templates_text-update": {
+      "$ref": "documents/documents_templates_text-update.json"
+    },
+    "/documents_templates_text-delete/{textId}": {
+      "$ref": "documents/documents_templates_text-delete.json"
+    },
+    "/documents_templates_text-list": {
+      "$ref": "documents/documents_templates_text-list.json"
+    },
+    "/events-add": {
+      "$ref": "events/events-add.json"
+    },
+    "/events-get/{eventId}": {
+      "$ref": "events/events-get.json"
+    },
+    "/events-update": {
+      "$ref": "events/events-update.json"
+    },
+    "/events-delete/{eventId}": {
+      "$ref": "events/events-delete.json"
+    },
+    "/events-list": {
+      "$ref": "events/events-list.json"
+    },
+    "/events_subscribers-add": {
+      "$ref": "events/events_subscribers-add.json"
+    },
+    "/events_subscribers-get/{subscriberId}": {
+      "$ref": "events/events_subscribers-get.json"
+    },
+    "/events_subscribers-update": {
+      "$ref": "events/events_subscribers-update.json"
+    },
+    "/events_subscribers-delete/{subscriberId}": {
+      "$ref": "events/events_subscribers-delete.json"
+    },
+    "/events_subscribers-list": {
+      "$ref": "events/events_subscribers-list.json"
+    },
+    "/faq-add": {
+      "$ref": "faq/faq-add.json"
+    },
+    "/faq-get/{faqId}": {
+      "$ref": "faq/faq-get.json"
+    },
+    "/faq-update": {
+      "$ref": "faq/faq-update.json"
+    },
+    "/faq-delete/{faqId}": {
+      "$ref": "faq/faq-delete.json"
+    },
+    "/faq-list": {
+      "$ref": "faq/faq-list.json"
+    },
+    "/fast_links-add": {
+      "$ref": "fast/fast_links-add.json"
+    },
+    "/fast_links-get/{linkId}": {
+      "$ref": "fast/fast_links-get.json"
+    },
+    "/fast_links-update": {
+      "$ref": "fast/fast_links-update.json"
+    },
+    "/fast_links-delete/{linkId}": {
+      "$ref": "fast/fast_links-delete.json"
+    },
+    "/fast_links-list": {
+      "$ref": "fast/fast_links-list.json"
+    },
+    "/guides-add": {
+      "$ref": "guides/guides-add.json"
+    },
+    "/guides-get/{guideId}": {
+      "$ref": "guides/guides-get.json"
+    },
+    "/guides-update": {
+      "$ref": "guides/guides-update.json"
+    },
+    "/guides-delete/{guideId}": {
+      "$ref": "guides/guides-delete.json"
+    },
+    "/guides-list": {
+      "$ref": "guides/guides-list.json"
+    },
+    "/import_fc-add": {
+      "$ref": "import/import_fc-add.json"
+    },
+    "/import_fc-get/{importId}": {
+      "$ref": "import/import_fc-get.json"
+    },
+    "/import_fc-update": {
+      "$ref": "import/import_fc-update.json"
+    },
+    "/import_fc-delete/{importId}": {
+      "$ref": "import/import_fc-delete.json"
+    },
+    "/import_fc-list": {
+      "$ref": "import/import_fc-list.json"
+    },
+    "/import_fc_address-add": {
+      "$ref": "import/import_fc_address-add.json"
+    },
+    "/import_fc_address-get/{addressId}": {
+      "$ref": "import/import_fc_address-get.json"
+    },
+    "/import_fc_address-update": {
+      "$ref": "import/import_fc_address-update.json"
+    },
+    "/import_fc_address-delete/{addressId}": {
+      "$ref": "import/import_fc_address-delete.json"
+    },
+    "/import_fc_address-list": {
+      "$ref": "import/import_fc_address-list.json"
+    },
+    "/import_fc_contacts-add": {
+      "$ref": "import/import_fc_contacts-add.json"
+    },
+    "/import_fc_contacts-get/{contactId}": {
+      "$ref": "import/import_fc_contacts-get.json"
+    },
+    "/import_fc_contacts-update": {
+      "$ref": "import/import_fc_contacts-update.json"
+    },
+    "/import_fc_contacts-delete/{contactId}": {
+      "$ref": "import/import_fc_contacts-delete.json"
+    },
+    "/import_fc_contacts-list": {
+      "$ref": "import/import_fc_contacts-list.json"
+    },
+    "/import_fc_recapiti-add": {
+      "$ref": "import/import_fc_recapiti-add.json"
+    },
+    "/import_fc_recapiti-get/{recapitoId}": {
+      "$ref": "import/import_fc_recapiti-get.json"
+    },
+    "/import_fc_recapiti-update": {
+      "$ref": "import/import_fc_recapiti-update.json"
+    },
+    "/import_fc_recapiti-delete/{recapitoId}": {
+      "$ref": "import/import_fc_recapiti-delete.json"
+    },
+    "/import_fc_recapiti-list": {
+      "$ref": "import/import_fc_recapiti-list.json"
+    },
+    "/log_connections-add": {
+      "$ref": "log/log_connections-add.json"
+    },
+    "/log_connections-get/{connectionId}": {
+      "$ref": "log/log_connections-get.json"
+    },
+    "/log_connections-update": {
+      "$ref": "log/log_connections-update.json"
+    },
+    "/log_connections-delete/{connectionId}": {
+      "$ref": "log/log_connections-delete.json"
+    },
+    "/log_connections-list": {
+      "$ref": "log/log_connections-list.json"
+    },
+    "/log_searches-add": {
+      "$ref": "log/log_searches-add.json"
+    },
+    "/log_searches-get/{searchId}": {
+      "$ref": "log/log_searches-get.json"
+    },
+    "/log_searches-update": {
+      "$ref": "log/log_searches-update.json"
+    },
+    "/log_searches-delete/{searchId}": {
+      "$ref": "log/log_searches-delete.json"
+    },
+    "/log_searches-list": {
+      "$ref": "log/log_searches-list.json"
+    },
+    "/notes-add": {
+      "$ref": "notes/notes-add.json"
+    },
+    "/notes-get/{noteId}": {
+      "$ref": "notes/notes-get.json"
+    },
+    "/notes-update": {
+      "$ref": "notes/notes-update.json"
+    },
+    "/notes-delete/{noteId}": {
+      "$ref": "notes/notes-delete.json"
+    },
+    "/notes-list": {
+      "$ref": "notes/notes-list.json"
+    },
+    "/sessions-add": {
+      "$ref": "sessions/sessions-add.json"
+    },
+    "/sessions-get/{sessionId}": {
+      "$ref": "sessions/sessions-get.json"
+    },
+    "/sessions-update": {
+      "$ref": "sessions/sessions-update.json"
+    },
+    "/sessions-delete/{sessionId}": {
+      "$ref": "sessions/sessions-delete.json"
+    },
+    "/sessions-list": {
+      "$ref": "sessions/sessions-list.json"
+    },
+    "/sessions_councilors-add": {
+      "$ref": "sessions/sessions_councilors-add.json"
+    },
+    "/sessions_councilors-get/{councilorId}": {
+      "$ref": "sessions/sessions_councilors-get.json"
+    },
+    "/sessions_councilors-update": {
+      "$ref": "sessions/sessions_councilors-update.json"
+    },
+    "/sessions_councilors-delete/{councilorId}": {
+      "$ref": "sessions/sessions_councilors-delete.json"
+    },
+    "/sessions_councilors-list": {
+      "$ref": "sessions/sessions_councilors-list.json"
+    },
+    "/sessions_deliberations-add": {
+      "$ref": "sessions/sessions_deliberations-add.json"
+    },
+    "/sessions_deliberations-get/{deliberationId}": {
+      "$ref": "sessions/sessions_deliberations-get.json"
+    },
+    "/sessions_deliberations-update": {
+      "$ref": "sessions/sessions_deliberations-update.json"
+    },
+    "/sessions_deliberations-delete/{deliberationId}": {
+      "$ref": "sessions/sessions_deliberations-delete.json"
+    },
+    "/sessions_deliberations-list": {
+      "$ref": "sessions/sessions_deliberations-list.json"
+    },
+    "/sessions_deliberations_councilors-add": {
+      "$ref": "sessions/sessions_deliberations_councilors-add.json"
+    },
+    "/sessions_deliberations_councilors-get/{councilorId}": {
+      "$ref": "sessions/sessions_deliberations_councilors-get.json"
+    },
+    "/sessions_deliberations_councilors-update": {
+      "$ref": "sessions/sessions_deliberations_councilors-update.json"
+    },
+    "/sessions_deliberations_councilors-delete/{councilorId}": {
+      "$ref": "sessions/sessions_deliberations_councilors-delete.json"
+    },
+    "/sessions_deliberations_councilors-list": {
+      "$ref": "sessions/sessions_deliberations_councilors-list.json"
+    },
+    "/sessions_deliberations_revisions-add": {
+      "$ref": "sessions/sessions_deliberations_revisions-add.json"
+    },
+    "/sessions_deliberations_revisions-get/{revisionId}": {
+      "$ref": "sessions/sessions_deliberations_revisions-get.json"
+    },
+    "/sessions_deliberations_revisions-update": {
+      "$ref": "sessions/sessions_deliberations_revisions-update.json"
+    },
+    "/sessions_deliberations_revisions-delete/{revisionId}": {
+      "$ref": "sessions/sessions_deliberations_revisions-delete.json"
+    },
+    "/sessions_deliberations_revisions-list": {
+      "$ref": "sessions/sessions_deliberations_revisions-list.json"
+    },
+    "/templates-add": {
+      "$ref": "templates/templates-add.json"
+    },
+    "/templates-get/{templateId}": {
+      "$ref": "templates/templates-get.json"
+    },
+    "/templates-update": {
+      "$ref": "templates/templates-update.json"
+    },
+    "/templates-delete/{templateId}": {
+      "$ref": "templates/templates-delete.json"
+    },
+    "/templates-list": {
+      "$ref": "templates/templates-list.json"
+    },
+    "/tips-add": {
+      "$ref": "tips/tips-add.json"
+    },
+    "/tips-get/{tipId}": {
+      "$ref": "tips/tips-get.json"
+    },
+    "/tips-update": {
+      "$ref": "tips/tips-update.json"
+    },
+    "/tips-delete/{tipId}": {
+      "$ref": "tips/tips-delete.json"
+    },
+    "/tips-list": {
+      "$ref": "tips/tips-list.json"
+    },
+    "/tribute_record-add": {
+      "$ref": "tribute/tribute_record-add.json"
+    },
+    "/tribute_record-get/{recordId}": {
+      "$ref": "tribute/tribute_record-get.json"
+    },
+    "/tribute_record-update": {
+      "$ref": "tribute/tribute_record-update.json"
+    },
+    "/tribute_record-delete/{recordId}": {
+      "$ref": "tribute/tribute_record-delete.json"
+    },
+    "/tribute_record-list": {
+      "$ref": "tribute/tribute_record-list.json"
+    },
+    "/types_skills-add": {
+      "$ref": "types/types_skills-add.json"
+    },
+    "/types_skills-get/{skillId}": {
+      "$ref": "types/types_skills-get.json"
+    },
+    "/types_skills-update": {
+      "$ref": "types/types_skills-update.json"
+    },
+    "/types_skills-delete/{skillId}": {
+      "$ref": "types/types_skills-delete.json"
+    },
+    "/types_skills-list": {
+      "$ref": "types/types_skills-list.json"
+    },
+    "/types_skills_roles-add": {
+      "$ref": "types/types_skills_roles-add.json"
+    },
+    "/types_skills_roles-get/{roleId}": {
+      "$ref": "types/types_skills_roles-get.json"
+    },
+    "/types_skills_roles-update": {
+      "$ref": "types/types_skills_roles-update.json"
+    },
+    "/types_skills_roles-delete/{roleId}": {
+      "$ref": "types/types_skills_roles-delete.json"
+    },
+    "/types_skills_roles-list": {
+      "$ref": "types/types_skills_roles-list.json"
+    },
+    "/types_standard-add": {
+      "$ref": "types/types_standard-add.json"
+    },
+    "/types_standard-get/{standardId}": {
+      "$ref": "types/types_standard-get.json"
+    },
+    "/types_standard-update": {
+      "$ref": "types/types_standard-update.json"
+    },
+    "/types_standard-delete/{standardId}": {
+      "$ref": "types/types_standard-delete.json"
+    },
+    "/types_standard-list": {
+      "$ref": "types/types_standard-list.json"
+    },
+    "/types_standard_categories-add": {
+      "$ref": "types/types_standard_categories-add.json"
+    },
+    "/types_standard_categories-get/{categoryId}": {
+      "$ref": "types/types_standard_categories-get.json"
+    },
+    "/types_standard_categories-update": {
+      "$ref": "types/types_standard_categories-update.json"
+    },
+    "/types_standard_categories-delete/{categoryId}": {
+      "$ref": "types/types_standard_categories-delete.json"
+    },
+    "/types_standard_categories-list": {
+      "$ref": "types/types_standard_categories-list.json"
+    },
+    "/users-add": {
+      "$ref": "users/users-add.json"
+    },
+    "/users-get/{username}": {
+      "$ref": "users/users-get.json"
+    },
+    "/users-update": {
+      "$ref": "users/users-update.json"
+    },
+    "/users-delete/{username}": {
+      "$ref": "users/users-delete.json"
+    },
+    "/users-list": {
+      "$ref": "users/users-list.json"
+    },
+    "/users_emails-add": {
+      "$ref": "users/users_emails-add.json"
+    },
+    "/users_emails-get/{email}": {
+      "$ref": "users/users_emails-get.json"
+    },
+    "/users_emails-update": {
+      "$ref": "users/users_emails-update.json"
+    },
+    "/users_emails-delete/{email}": {
+      "$ref": "users/users_emails-delete.json"
+    },
+    "/users_emails-list": {
+      "$ref": "users/users_emails-list.json"
+    },
+    "/users_emails_verification-add": {
+      "$ref": "users/users_emails_verification-add.json"
+    },
+    "/users_emails_verification-get/{verificationId}": {
+      "$ref": "users/users_emails_verification-get.json"
+    },
+    "/users_emails_verification-update": {
+      "$ref": "users/users_emails_verification-update.json"
+    },
+    "/users_emails_verification-delete/{verificationId}": {
+      "$ref": "users/users_emails_verification-delete.json"
+    },
+    "/users_emails_verification-list": {
+      "$ref": "users/users_emails_verification-list.json"
+    },
+    "/users_groups-add": {
+      "$ref": "users/users_groups-add.json"
+    },
+    "/users_groups-get/{groupId}": {
+      "$ref": "users/users_groups-get.json"
+    },
+    "/users_groups-update": {
+      "$ref": "users/users_groups-update.json"
+    },
+    "/users_groups-delete/{groupId}": {
+      "$ref": "users/users_groups-delete.json"
+    },
+    "/users_groups-list": {
+      "$ref": "users/users_groups-list.json"
+    },
+    "/users_groups_page-add": {
+      "$ref": "users/users_groups_pages-add.json"
+    },
+    "/users_groups_page-get/{pageId}": {
+      "$ref": "users/users_groups_pages-get.json"
+    },
+    "/users_groups_page-update": {
+      "$ref": "users/users_groups_pages-update.json"
+    },
+    "/users_groups_page-delete/{pageId}": {
+      "$ref": "users/users_groups_pages-delete.json"
+    },
+    "/users_groups_pages-list": {
+      "$ref": "users/users_groups_pages-list.json"
+    },
+    "/users_groups_user-add": {
+      "$ref": "users/users_groups_users-add.json"
+    },
+    "/users_groups_user-get/{userId}": {
+      "$ref": "users/users_groups_users-get.json"
+    },
+    "/users_groups_user-update": {
+      "$ref": "users/users_groups_users-update.json"
+    },
+    "/users_groups_user-delete/{userId}": {
+      "$ref": "users/users_groups_users-delete.json"
+    },
+    "/users_groups_users-list": {
+      "$ref": "users/users_groups_users-list.json"
+    },
+    "/users_logins-add": {
+      "$ref": "users/users_logins-add.json"
+    },
+    "/users_logins-get/{loginId}": {
+      "$ref": "users/users_logins-get.json"
+    },
+    "/users_logins-update": {
+      "$ref": "users/users_logins-update.json"
+    },
+    "/users_logins-delete/{loginId}": {
+      "$ref": "users/users_logins-delete.json"
+    },
+    "/users_logins-list": {
+      "$ref": "users/users_logins-list.json"
+    },
+    "/users_logins_remember-add": {
+      "$ref": "users/users_logins_remember-add.json"
+    },
+    "/users_logins_remember-get/{rememberId}": {
+      "$ref": "users/users_logins_remember-get.json"
+    },
+    "/users_logins_remember-update": {
+      "$ref": "users/users_logins_remember-update.json"
+    },
+    "/users_logins_remember-delete/{rememberId}": {
+      "$ref": "users/users_logins_remember-delete.json"
+    },
+    "/users_logins_remember-list": {
+      "$ref": "users/users_logins_remember-list.json"
+    },
+    "/users_page-add": {
+      "$ref": "users/users_pages-add.json"
+    },
+    "/users_page-get/{pageId}": {
+      "$ref": "users/users_pages-get.json"
+    },
+    "/users_page-update": {
+      "$ref": "users/users_pages-update.json"
+    },
+    "/users_page-delete/{pageId}": {
+      "$ref": "users/users_pages-delete.json"
+    },
+    "/users_pages-list": {
+      "$ref": "users/users_pages-list.json"
+    },
+    "/users_statistics-add": {
+      "$ref": "users/users_statistics-add.json"
+    },
+    "/users_statistics-get/{statisticId}": {
+      "$ref": "users/users_statistics-get.json"
+    },
+    "/users_statistics-update": {
+      "$ref": "users/users_statistics-update.json"
+    },
+    "/users_statistics-delete/{statisticId}": {
+      "$ref": "users/users_statistics-delete.json"
+    },
+    "/users_statistics-list": {
+      "$ref": "users/users_statistics-list.json"
+    },
+    "/api-json": {
+      "$ref": "utils/api-json.json"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "servers": [
+    {
+      "url": "/",
+      "description": "Swagger cs-ordini"
+    },
+    {
+      "url": "https://[[DOMAIN]]/",
+      "description": "ClientHub for cs-ordini"
+    }
+  ]
+}

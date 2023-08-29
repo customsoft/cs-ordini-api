@@ -1,0 +1,124 @@
+{
+  "summary": "Add chapters",
+  "post": {
+    "tags": [
+      "chapters"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "chapters-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idChapter": {
+                  "type": "integer"
+                },
+                "chapter": {
+                  "type": "string"
+                },
+                "chapterCode": {
+                  "type": "string"
+                },
+                "chapterYear": {
+                  "type": "string"
+                },
+                "quotaYear": {
+                  "type": "string"
+                },
+                "prevision": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "chapter": {
+                "type": "string"
+              },
+              "chapterCode": {
+                "type": "string"
+              },
+              "chapterYear": {
+                "type": "string"
+              },
+              "quotaYear": {
+                "type": "string"
+              },
+              "prevision": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

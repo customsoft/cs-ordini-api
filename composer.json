@@ -1,0 +1,29 @@
+{
+  "name": "customsoft/cs-ordini-api",
+  "description": "cs-ordini-api by Customsoft ddi Zordan Marco. Gestionale Ordini",
+  "homepage": "https://cs-ordini.customsoft.it",
+  "license": "AGPL-3.0",
+  "authors": [
+    {
+      "name": "Customsoft Team",
+      "email": "info@customsoft.it",
+      "homepage": "https://customsoft.it/"
+    },
+    {
+      "name": "Contributors",
+      "homepage": "https://github.com/customsoft/cs-ordini-api/graphs/contributors"
+    }
+  ],
+  "require": {
+    "afosto/yaac": "^1.5",
+    "davidepastore/codice-fiscale": "^0.8.0",
+    "phpgangsta/googleauthenticator": "dev-master",
+    "phpseclib/phpseclib": "^3.0",
+    "spatie/ssl-certificate": "^1.21",
+    "zircote/swagger-php": "^4.2"
+  },
+  "require-dev": {
+    "phalcon/devtools": "^4.2",
+    "phalcon/ide-stubs": "^5.2.3"
+  }
+}

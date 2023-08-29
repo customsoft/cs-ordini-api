@@ -1,0 +1,105 @@
+{
+  "summary": "List associates_deliberations",
+  "get": {
+    "tags": [
+      "associates_deliberations"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "associates_deliberations-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "associates_deliberations": {
+                  "type": "array",
+                  "items": {
+                    "idAssociateDeliberation": {
+                      "type": "string"
+                    },
+                    "idAssociate": {
+                      "type": "integer"
+                    },
+                    "idTypeDeliberation": {
+                      "type": "integer"
+                    },
+                    "deliberationNumber": {
+                      "type": "string"
+                    },
+                    "deliberationDate": {
+                      "type": "string"
+                    },
+                    "deliberationDateRequest": {
+                      "type": "string"
+                    },
+                    "deliberationDateFrom": {
+                      "type": "string"
+                    },
+                    "idTypeReason": {
+                      "type": "integer"
+                    },
+                    "idAssociationFrom": {
+                      "type": "integer"
+                    },
+                    "idAssociationTo": {
+                      "type": "integer"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesDeliberationsId",
+        "in": "path",
+        "description": "associatesDeliberationsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

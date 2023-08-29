@@ -1,0 +1,88 @@
+{
+  "summary": "Add sessions_deliberations_revisions",
+  "post": {
+    "tags": [
+      "sessions_deliberations_revisions"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "sessions_deliberations_revisions-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idSessionDeliberationRevision": {
+                  "type": "string"
+                },
+                "idSessionDeliberation": {
+                  "type": "integer"
+                },
+                "typeDeliberationText": {
+                  "type": "integer"
+                },
+                "deliberationText": {
+                  "type": "string"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idSessionDeliberation": {
+                "type": "integer"
+              },
+              "typeDeliberationText": {
+                "type": "integer"
+              },
+              "deliberationText": {
+                "type": "string"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

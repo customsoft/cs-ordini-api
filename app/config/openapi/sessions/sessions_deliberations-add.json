@@ -1,0 +1,136 @@
+{
+  "summary": "Add sessions_deliberations",
+  "post": {
+    "tags": [
+      "sessions_deliberations"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "sessions_deliberations-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idSessionDeliberation": {
+                  "type": "integer"
+                },
+                "idSession": {
+                  "type": "integer"
+                },
+                "deliberationNumber": {
+                  "type": "integer"
+                },
+                "deliberationYear": {
+                  "type": "string"
+                },
+                "deliberationObject": {
+                  "type": "string"
+                },
+                "startTime": {
+                  "type": "string"
+                },
+                "endTime": {
+                  "type": "string"
+                },
+                "deliberationPreface": {
+                  "type": "string"
+                },
+                "deliberationText": {
+                  "type": "string"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idSession": {
+                "type": "integer"
+              },
+              "deliberationNumber": {
+                "type": "integer"
+              },
+              "deliberationYear": {
+                "type": "string"
+              },
+              "deliberationObject": {
+                "type": "string"
+              },
+              "startTime": {
+                "type": "string"
+              },
+              "endTime": {
+                "type": "string"
+              },
+              "deliberationPreface": {
+                "type": "string"
+              },
+              "deliberationText": {
+                "type": "string"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

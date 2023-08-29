@@ -1,0 +1,90 @@
+{
+  "summary": "List associates_contacts",
+  "get": {
+    "tags": [
+      "associates_contacts"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "associates_contacts-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "associates_contacts": {
+                  "type": "array",
+                  "items": {
+                    "idAssociateContact": {
+                      "type": "string"
+                    },
+                    "idAssociate": {
+                      "type": "integer"
+                    },
+                    "contact": {
+                      "type": "string"
+                    },
+                    "numberOnly": {
+                      "type": "string"
+                    },
+                    "comments": {
+                      "type": "string"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesContactsId",
+        "in": "path",
+        "description": "associatesContactsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

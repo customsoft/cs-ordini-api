@@ -1,0 +1,81 @@
+{
+  "summary": "List fast_links",
+  "get": {
+    "tags": [
+      "fast_links"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "fast_links-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fast_links": {
+                  "type": "array",
+                  "items": {
+                    "idFastLink": {
+                      "type": "integer"
+                    },
+                    "fast_link": {
+                      "type": "string"
+                    },
+                    "fast_linkDescription": {
+                      "type": "string"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "fastLinksId",
+        "in": "path",
+        "description": "fastLinksId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "summary": "API json",
+  "get": {
+    "tags": [
+      "utils"
+    ],
+    "security": [],
+    "description": "Permette di ottenere le api in formato json",
+    "operationId": "api-json",
+    "responses": {
+      "200": {
+        "content": {
+          "application/json": {}
+        }
+      }
+    }
+  }
+}

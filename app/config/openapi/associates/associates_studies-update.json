@@ -1,0 +1,127 @@
+{
+  "summary": "Update associates_studies",
+  "put": {
+    "tags": [
+      "associates_studies"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "associates_studies-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateStudy": {
+                  "type": "string"
+                },
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "string"
+                },
+                "idTypeStudy": {
+                  "type": "integer"
+                },
+                "idTypeAt": {
+                  "type": "integer"
+                },
+                "comments": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idAssociateStudy": {
+                "type": "string"
+              },
+              "idAssociate": {
+                "type": "integer"
+              },
+              "year": {
+                "type": "string"
+              },
+              "idTypeStudy": {
+                "type": "integer"
+              },
+              "idTypeAt": {
+                "type": "integer"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

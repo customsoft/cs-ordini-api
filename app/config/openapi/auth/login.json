@@ -1,0 +1,40 @@
+{
+  "summary": "Authentication Login",
+  "post": {
+    "tags": [
+      "auth"
+    ],
+    "security": [
+      {
+        "basicAuth": []
+      }
+    ],
+    "description": "Permette il login alle API",
+    "operationId": "login",
+    "responses": {
+      "200": {
+        "description": "Restituisce il token per le altre API",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/LoginResponse"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad request: check POST data"
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    }
+  }
+}

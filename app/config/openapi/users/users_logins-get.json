@@ -1,0 +1,73 @@
+{
+  "summary": "Get users_logins",
+  "get": {
+    "tags": [
+      "users_logins"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "users_logins-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idUserLogin": {
+                  "type": "string"
+                },
+                "successLogin": {
+                  "type": "integer"
+                },
+                "idUser": {
+                  "type": "integer"
+                },
+                "userName": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "ipAddress": {
+                  "type": "string"
+                },
+                "userAgent": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "usersLoginsId",
+        "in": "path",
+        "description": "usersLoginsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

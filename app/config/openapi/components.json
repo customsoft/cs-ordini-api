@@ -1,0 +1,61 @@
+{
+  "securitySchemes": {
+    "basicAuth": {
+      "type": "http",
+      "scheme": "basic"
+    },
+    "bearerAuth": {
+      "type": "http",
+      "scheme": "bearer",
+      "bearerFormat": "JWT"
+    }
+  },
+  "schemas": {
+    "Errors": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "maxLength": 15
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    },
+    "LoginRequest": {
+      "type": "object",
+      "required": [
+        "username",
+        "password"
+      ],
+      "properties": {
+        "user": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "password": {
+          "type": "string",
+          "maxLength": 100
+        }
+      }
+    },
+    "LoginResponse": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      }
+    },
+    "LogoutResponse": {
+      "type": "object",
+      "properties": {
+        "logout": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

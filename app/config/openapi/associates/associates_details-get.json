@@ -1,0 +1,85 @@
+{
+  "summary": "Get associates_details",
+  "get": {
+    "tags": [
+      "associates_details"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "associates_details-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateDetail": {
+                  "type": "string"
+                },
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "idTypeDetail": {
+                  "type": "integer"
+                },
+                "detail": {
+                  "type": "string"
+                },
+                "idDetail": {
+                  "type": "integer"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesDetailsId",
+        "in": "path",
+        "description": "associatesDetailsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "summary": "Update events",
+  "put": {
+    "tags": [
+      "events"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "events-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idEvent": {
+                  "type": "integer"
+                },
+                "idAssociation": {
+                  "type": "integer"
+                },
+                "event": {
+                  "type": "string"
+                },
+                "descriptionEvent": {
+                  "type": "string"
+                },
+                "startEvent": {
+                  "type": "string"
+                },
+                "endEvent": {
+                  "type": "string"
+                },
+                "eventPlace": {
+                  "type": "string"
+                },
+                "seats": {
+                  "type": "integer"
+                },
+                "enrollBy": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "enrollWeb": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idEvent": {
+                "type": "integer"
+              },
+              "idAssociation": {
+                "type": "integer"
+              },
+              "event": {
+                "type": "string"
+              },
+              "descriptionEvent": {
+                "type": "string"
+              },
+              "startEvent": {
+                "type": "string"
+              },
+              "endEvent": {
+                "type": "string"
+              },
+              "eventPlace": {
+                "type": "string"
+              },
+              "seats": {
+                "type": "integer"
+              },
+              "enrollBy": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              },
+              "enrollWeb": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

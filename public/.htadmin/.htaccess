@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Access Restricted"
+AuthUserFile /home/alan/csOrdini/cs-ordini-api/.htpasswd
+Require valid-user

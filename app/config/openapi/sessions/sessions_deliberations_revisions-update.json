@@ -1,0 +1,91 @@
+{
+  "summary": "Update sessions_deliberations_revisions",
+  "put": {
+    "tags": [
+      "sessions_deliberations_revisions"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "sessions_deliberations_revisions-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idSessionDeliberationRevision": {
+                  "type": "string"
+                },
+                "idSessionDeliberation": {
+                  "type": "integer"
+                },
+                "typeDeliberationText": {
+                  "type": "integer"
+                },
+                "deliberationText": {
+                  "type": "string"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idSessionDeliberationRevision": {
+                "type": "string"
+              },
+              "idSessionDeliberation": {
+                "type": "integer"
+              },
+              "typeDeliberationText": {
+                "type": "integer"
+              },
+              "deliberationText": {
+                "type": "string"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

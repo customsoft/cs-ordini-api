@@ -1,0 +1,157 @@
+{
+  "summary": "Update tribute_record",
+  "put": {
+    "tags": [
+      "tribute_record"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "tribute_record-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idTributeRecord": {
+                  "type": "integer"
+                },
+                "idAssociation": {
+                  "type": "integer"
+                },
+                "associationFiscalCode": {
+                  "type": "string"
+                },
+                "associationName": {
+                  "type": "string"
+                },
+                "associationAddress": {
+                  "type": "string"
+                },
+                "associationPostalCode": {
+                  "type": "string"
+                },
+                "associationCity": {
+                  "type": "string"
+                },
+                "associationProvince": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "string"
+                },
+                "dateLastSend": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idTributeRecord": {
+                "type": "integer"
+              },
+              "idAssociation": {
+                "type": "integer"
+              },
+              "associationFiscalCode": {
+                "type": "string"
+              },
+              "associationName": {
+                "type": "string"
+              },
+              "associationAddress": {
+                "type": "string"
+              },
+              "associationPostalCode": {
+                "type": "string"
+              },
+              "associationCity": {
+                "type": "string"
+              },
+              "associationProvince": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              },
+              "dateLastSend": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

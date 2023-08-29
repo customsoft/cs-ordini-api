@@ -1,0 +1,87 @@
+{
+  "summary": "List events_subscribers",
+  "get": {
+    "tags": [
+      "events_subscribers"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "events_subscribers-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "events_subscribers": {
+                  "type": "array",
+                  "items": {
+                    "idEventsSubscribers": {
+                      "type": "string"
+                    },
+                    "idEvent": {
+                      "type": "integer"
+                    },
+                    "idAssociate": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "dataConferma": {
+                      "type": "string"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "eventsSubscribersId",
+        "in": "path",
+        "description": "eventsSubscribersId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

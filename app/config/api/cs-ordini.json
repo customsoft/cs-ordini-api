@@ -1,0 +1,99 @@
+{
+  "name": "customsoft/cs-ordini-api",
+  "description": "Condifigurazione api",
+  "include": [
+    "openapi/_base_openapi.json"
+  ],
+  "shared_class_functions": {
+    "Auth_checkAuth": {
+      "_comment_type": "none,basic,bearer,jwt,jwtPdnd",
+      "type": "jwt",
+      "jwtParams": {
+        "aud": "cs-ordini",
+        "exp": "+1 day",
+        "iss": "customsoft",
+        "notBefore": "-1 minute",
+        "passphrase": "@$%AS52efd4c4ca4a9f127bddce1bca551037e142b88a0b105071bdefcde37a439b56",
+        "sub": "customsoft"
+      }
+    }
+  },
+  "delete": {
+    "actions": {
+      "deleteUser": {
+        "class_functions": {
+          "shared_class_functions": "Auth_checkAuth",
+          "deleteData": {}
+        }
+      }
+    }
+  },
+  "get": {
+    "actions": {
+      "api-json": {
+        "class_functions": {
+          "ApiJson_execute": {}
+        }
+      },
+      "listUsers": {
+        "class_functions": {
+          "shared_class_functions": "Auth_checkAuth",
+          "listData": {}
+        }
+      },
+      "logout": {
+        "class_functions": {
+          "shared_class_functions": "Auth_checkAuth",
+          "Auth_logout": {
+            "redisKey": "token",
+            "authNeeded": true
+          }
+        }
+      },
+      "status": {
+        "class_functions": {
+          "Redis_readData": {
+            "redisKey": "token",
+            "data": [
+              "loginStatus",
+              "pages"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "post": {
+    "actions": {
+      "login": {
+        "allowedEmptyPost": true,
+        "class_functions": {
+          "Auth_checkAuth": {
+            "_comment_type": "none,basic,bearer,jwt,jwtPdnd",
+            "type": "basic",
+            "_comment_validation": "json (solo per test o demo), ldap, db, ecc.",
+            "validation": "json"
+          },
+          "Auth_createAuthJwt": {
+            "authNeeded": true,
+            "jwtParams": {
+              "contentType": "application/json",
+              "aud": "cs-ordini",
+              "exp": "+1 day",
+              "iss": "customsoft",
+              "notBefore": "-1 minute",
+              "passphrase": "@$%AS52efd4c4ca4a9f127bddce1bca551037e142b88a0b105071bdefcde37a439b56",
+              "prefixId": "cs-ordini_",
+              "sub": "customsoft"
+            },
+            "redisFields": {
+              "token": ""
+            },
+            "redisKey": "token",
+            "saveToRedis": true
+          }
+        }
+      }
+    }
+  }
+}

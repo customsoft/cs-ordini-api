@@ -1,0 +1,73 @@
+{
+  "summary": "Update log_connections",
+  "put": {
+    "tags": [
+      "log_connections"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "log_connections-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idLogConnection": {
+                  "type": "string"
+                },
+                "idUser": {
+                  "type": "integer"
+                },
+                "dateConnection": {
+                  "type": "string"
+                },
+                "ipConnection": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idLogConnection": {
+                "type": "string"
+              },
+              "idUser": {
+                "type": "integer"
+              },
+              "dateConnection": {
+                "type": "string"
+              },
+              "ipConnection": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

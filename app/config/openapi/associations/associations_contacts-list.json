@@ -1,0 +1,87 @@
+{
+  "summary": "List associations_contacts",
+  "get": {
+    "tags": [
+      "associations_contacts"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "associations_contacts-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "associations_contacts": {
+                  "type": "array",
+                  "items": {
+                    "idAssociationContact": {
+                      "type": "integer"
+                    },
+                    "idAssociation": {
+                      "type": "integer"
+                    },
+                    "idTypeContact": {
+                      "type": "integer"
+                    },
+                    "contact": {
+                      "type": "string"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associationsContactsId",
+        "in": "path",
+        "description": "associationsContactsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

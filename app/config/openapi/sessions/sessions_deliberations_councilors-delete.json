@@ -1,0 +1,52 @@
+{
+  "summary": "Delete sessions_deliberations_councilors",
+  "delete": {
+    "tags": [
+      "sessions_deliberations_councilors"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to delete a record ",
+    "operationId": "sessions_deliberations_councilors-delete",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idSessionDeliberationCouncilor": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "sessionsDeliberationsCouncilorsId",
+        "in": "path",
+        "description": "sessionsDeliberationsCouncilorsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

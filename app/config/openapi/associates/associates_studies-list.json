@@ -1,0 +1,93 @@
+{
+  "summary": "List associates_studies",
+  "get": {
+    "tags": [
+      "associates_studies"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "associates_studies-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "associates_studies": {
+                  "type": "array",
+                  "items": {
+                    "idAssociateStudy": {
+                      "type": "string"
+                    },
+                    "idAssociate": {
+                      "type": "integer"
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "idTypeStudy": {
+                      "type": "integer"
+                    },
+                    "idTypeAt": {
+                      "type": "integer"
+                    },
+                    "comments": {
+                      "type": "string"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesStudiesId",
+        "in": "path",
+        "description": "associatesStudiesId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

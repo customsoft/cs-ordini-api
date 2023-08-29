@@ -1,0 +1,76 @@
+{
+  "summary": "Add tips",
+  "post": {
+    "tags": [
+      "tips"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "tips-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idTip": {
+                  "type": "integer"
+                },
+                "titleTip": {
+                  "type": "string"
+                },
+                "tip": {
+                  "type": "string"
+                },
+                "scriptJS": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "titleTip": {
+                "type": "string"
+              },
+              "tip": {
+                "type": "string"
+              },
+              "scriptJS": {
+                "type": "string"
+              },
+              "created": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

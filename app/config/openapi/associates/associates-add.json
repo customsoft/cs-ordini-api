@@ -1,0 +1,196 @@
+{
+  "summary": "Add associates",
+  "post": {
+    "tags": [
+      "associates"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "associates-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "idProtocolRegistry": {
+                  "type": "string"
+                },
+                "idAssociation": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "birthDate": {
+                  "type": "string"
+                },
+                "idBirthState": {
+                  "type": "integer"
+                },
+                "idBirthCity": {
+                  "type": "string"
+                },
+                "birthCity": {
+                  "type": "string"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "fiscalCode": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "string"
+                },
+                "commentsQuota": {
+                  "type": "string"
+                },
+                "notAllowNewsletters": {
+                  "type": "string"
+                },
+                "notAllowInitiatives": {
+                  "type": "string"
+                },
+                "notAllowSearches": {
+                  "type": "string"
+                },
+                "jobSearch": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idProtocolRegistry": {
+                "type": "string"
+              },
+              "idAssociation": {
+                "type": "integer"
+              },
+              "section": {
+                "type": "string"
+              },
+              "lastName": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "birthDate": {
+                "type": "string"
+              },
+              "idBirthState": {
+                "type": "integer"
+              },
+              "idBirthCity": {
+                "type": "string"
+              },
+              "birthCity": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "fiscalCode": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "commentsQuota": {
+                "type": "string"
+              },
+              "notAllowNewsletters": {
+                "type": "string"
+              },
+              "notAllowInitiatives": {
+                "type": "string"
+              },
+              "notAllowSearches": {
+                "type": "string"
+              },
+              "jobSearch": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

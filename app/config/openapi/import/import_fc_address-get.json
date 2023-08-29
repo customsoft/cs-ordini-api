@@ -1,0 +1,82 @@
+{
+  "summary": "Get import_fc_address",
+  "get": {
+    "tags": [
+      "import_fc_address"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "import_fc_address-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idImportFCAddress": {
+                  "type": "string"
+                },
+                "idImportFC": {
+                  "type": "string"
+                },
+                "tipoIndirizzo": {
+                  "type": "string"
+                },
+                "indirizzo": {
+                  "type": "string"
+                },
+                "frazione": {
+                  "type": "string"
+                },
+                "cap": {
+                  "type": "string"
+                },
+                "comune": {
+                  "type": "string"
+                },
+                "provincia": {
+                  "type": "string"
+                },
+                "idValutazione": {
+                  "type": "integer"
+                },
+                "idOperatore": {
+                  "type": "string"
+                },
+                "dataModifica": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "importFcAddressId",
+        "in": "path",
+        "description": "importFcAddressId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "summary": "Logout",
+  "get": {
+    "tags": [
+      "auth"
+    ],
+    "description": "Effettua il logout dalle API",
+    "operationId": "logout",
+    "responses": {
+      "200": {
+        "description": "Logout effettuato con successo",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/LogoutResponse"
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    }
+  }
+}

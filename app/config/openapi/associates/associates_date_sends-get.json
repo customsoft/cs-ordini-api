@@ -1,0 +1,61 @@
+{
+  "summary": "Get associates_date_sends",
+  "get": {
+    "tags": [
+      "associates_date_sends"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "associates_date_sends-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateDateSend": {
+                  "type": "string"
+                },
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "idTypeSend": {
+                  "type": "integer"
+                },
+                "dateSend": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "associatesDateSendsId",
+        "in": "path",
+        "description": "associatesDateSendsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

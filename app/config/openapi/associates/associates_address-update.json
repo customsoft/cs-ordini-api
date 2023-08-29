@@ -1,0 +1,163 @@
+{
+  "summary": "Update associates_address",
+  "put": {
+    "tags": [
+      "associates_address"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "associates_address-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idAssociateAddress": {
+                  "type": "string"
+                },
+                "idAssociate": {
+                  "type": "integer"
+                },
+                "idAddress": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "number": {
+                  "type": "integer"
+                },
+                "letter": {
+                  "type": "string"
+                },
+                "idCity": {
+                  "type": "string"
+                },
+                "postalCode": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "province": {
+                  "type": "string"
+                },
+                "locality": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idAssociateAddress": {
+                "type": "string"
+              },
+              "idAssociate": {
+                "type": "integer"
+              },
+              "idAddress": {
+                "type": "string"
+              },
+              "address": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer"
+              },
+              "letter": {
+                "type": "string"
+              },
+              "idCity": {
+                "type": "string"
+              },
+              "postalCode": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
+              },
+              "locality": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

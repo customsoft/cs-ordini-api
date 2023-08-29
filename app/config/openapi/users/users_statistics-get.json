@@ -1,0 +1,58 @@
+{
+  "summary": "Get users_statistics",
+  "get": {
+    "tags": [
+      "users_statistics"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "users_statistics-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idUserStatistics": {
+                  "type": "integer"
+                },
+                "idUsers": {
+                  "type": "integer"
+                },
+                "postEmailNotifyEcc": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "usersStatisticsId",
+        "in": "path",
+        "description": "usersStatisticsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

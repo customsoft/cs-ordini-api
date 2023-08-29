@@ -1,0 +1,73 @@
+{
+  "summary": "Get import_fc_recapiti",
+  "get": {
+    "tags": [
+      "import_fc_recapiti"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "import_fc_recapiti-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idFormContImportRecapito": {
+                  "type": "string"
+                },
+                "idFormContImport": {
+                  "type": "string"
+                },
+                "tipoRecapito": {
+                  "type": "string"
+                },
+                "recapito": {
+                  "type": "string"
+                },
+                "annotazione": {
+                  "type": "string"
+                },
+                "idValutazione": {
+                  "type": "integer"
+                },
+                "idOperatore": {
+                  "type": "string"
+                },
+                "dataModifica": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "importFcRecapitiId",
+        "in": "path",
+        "description": "importFcRecapitiId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

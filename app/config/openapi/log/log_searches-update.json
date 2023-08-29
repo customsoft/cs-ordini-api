@@ -1,0 +1,97 @@
+{
+  "summary": "Update log_searches",
+  "put": {
+    "tags": [
+      "log_searches"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to update a record ",
+    "operationId": "log_searches-update",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idInfoSearch": {
+                  "type": "string"
+                },
+                "idAssociation": {
+                  "type": "integer"
+                },
+                "search": {
+                  "type": "string"
+                },
+                "numberSearch": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idInfoSearch": {
+                "type": "string"
+              },
+              "idAssociation": {
+                "type": "integer"
+              },
+              "search": {
+                "type": "string"
+              },
+              "numberSearch": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

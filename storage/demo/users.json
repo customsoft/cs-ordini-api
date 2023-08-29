@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "username": "marco",
+      "password": "marco",
+      "email": "marco@example.com",
+      "fullName": "Marco Zordan",
+      "groups": [
+        "developers"
+      ],
+      "permission": {
+        "read": true,
+        "write": true,
+        "execute": false
+      },
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "username": "alan",
+      "password": "Padoan",
+      "email": "alan@example.com",
+      "fullName": "Alan Padoan",
+      "groups": [
+        "developers"
+      ],
+      "permission": {
+        "read": true,
+        "write": true,
+        "execute": false
+      },
+      "roles": [
+        "admin"
+      ]
+    },
+    {
+      "username": "julia",
+      "password": "julia123",
+      "email": "julia@example.com",
+      "fullName": "Julia Smith",
+      "groups": [
+        "users"
+      ],
+      "permission": {
+        "read": true,
+        "write": false,
+        "execute": true
+      },
+      "roles": [
+        "editor"
+      ]
+    },
+    {
+      "username": "alex",
+      "password": "alexpass",
+      "email": "alex@example.com",
+      "fullName": "Alex Johnson",
+      "groups": [
+        "developers",
+        "admins"
+      ],
+      "permission": {
+        "read": true,
+        "write": true,
+        "execute": true
+      },
+      "roles": [
+        "developer",
+        "admin"
+      ]
+    }
+  ],
+  "groups": {
+    "developers": [
+      "marco",
+      "alex"
+    ],
+    "users": [
+      "julia"
+    ],
+    "admins": [
+      "alex"
+    ]
+  },
+  "permissions": {
+    "read": [
+      "marco",
+      "julia",
+      "alex"
+    ],
+    "write": [
+      "marco",
+      "alex"
+    ],
+    "execute": [
+      "julia",
+      "alex"
+    ]
+  },
+  "roles": {
+    "admin": [
+      "marco",
+      "alex"
+    ],
+    "editor": [
+      "julia"
+    ],
+    "developer": [
+      "alex"
+    ]
+  }
+}

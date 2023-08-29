@@ -1,0 +1,196 @@
+{
+  "summary": "Add import_fc",
+  "post": {
+    "tags": [
+      "import_fc"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "import_fc-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idImportFC": {
+                  "type": "string"
+                },
+                "ordine": {
+                  "type": "string"
+                },
+                "sezione": {
+                  "type": "string"
+                },
+                "primaIscrizione": {
+                  "type": "string"
+                },
+                "dataIscrizione": {
+                  "type": "string"
+                },
+                "numeroIscrizione": {
+                  "type": "string"
+                },
+                "dataIscrizB": {
+                  "type": "string"
+                },
+                "numIscrizB": {
+                  "type": "string"
+                },
+                "stato": {
+                  "type": "string"
+                },
+                "cognome": {
+                  "type": "string"
+                },
+                "nome": {
+                  "type": "string"
+                },
+                "sesso": {
+                  "type": "string"
+                },
+                "luogoNascita": {
+                  "type": "string"
+                },
+                "dataNascita": {
+                  "type": "string"
+                },
+                "codiceFiscale": {
+                  "type": "string"
+                },
+                "sospeso": {
+                  "type": "string"
+                },
+                "tarLazio": {
+                  "type": "string"
+                },
+                "occupazione": {
+                  "type": "string"
+                },
+                "cancellato": {
+                  "type": "string"
+                },
+                "nullaOstaAlTrasferimento": {
+                  "type": "string"
+                },
+                "espulso": {
+                  "type": "string"
+                },
+                "pubblicoDipendente": {
+                  "type": "string"
+                },
+                "idValutazione": {
+                  "type": "integer"
+                },
+                "idOperatore": {
+                  "type": "string"
+                },
+                "dataModifica": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "ordine": {
+                "type": "string"
+              },
+              "sezione": {
+                "type": "string"
+              },
+              "primaIscrizione": {
+                "type": "string"
+              },
+              "dataIscrizione": {
+                "type": "string"
+              },
+              "numeroIscrizione": {
+                "type": "string"
+              },
+              "dataIscrizB": {
+                "type": "string"
+              },
+              "numIscrizB": {
+                "type": "string"
+              },
+              "stato": {
+                "type": "string"
+              },
+              "cognome": {
+                "type": "string"
+              },
+              "nome": {
+                "type": "string"
+              },
+              "sesso": {
+                "type": "string"
+              },
+              "luogoNascita": {
+                "type": "string"
+              },
+              "dataNascita": {
+                "type": "string"
+              },
+              "codiceFiscale": {
+                "type": "string"
+              },
+              "sospeso": {
+                "type": "string"
+              },
+              "tarLazio": {
+                "type": "string"
+              },
+              "occupazione": {
+                "type": "string"
+              },
+              "cancellato": {
+                "type": "string"
+              },
+              "nullaOstaAlTrasferimento": {
+                "type": "string"
+              },
+              "espulso": {
+                "type": "string"
+              },
+              "pubblicoDipendente": {
+                "type": "string"
+              },
+              "idValutazione": {
+                "type": "integer"
+              },
+              "idOperatore": {
+                "type": "string"
+              },
+              "dataModifica": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

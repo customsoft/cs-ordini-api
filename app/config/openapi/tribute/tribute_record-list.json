@@ -1,0 +1,108 @@
+{
+  "summary": "List tribute_record",
+  "get": {
+    "tags": [
+      "tribute_record"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "tribute_record-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "tribute_record": {
+                  "type": "array",
+                  "items": {
+                    "idTributeRecord": {
+                      "type": "integer"
+                    },
+                    "idAssociation": {
+                      "type": "integer"
+                    },
+                    "associationFiscalCode": {
+                      "type": "string"
+                    },
+                    "associationName": {
+                      "type": "string"
+                    },
+                    "associationAddress": {
+                      "type": "string"
+                    },
+                    "associationPostalCode": {
+                      "type": "string"
+                    },
+                    "associationCity": {
+                      "type": "string"
+                    },
+                    "associationProvince": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "string"
+                    },
+                    "dateLastSend": {
+                      "type": "string"
+                    },
+                    "comments": {
+                      "type": "string"
+                    },
+                    "sortField": {
+                      "type": "integer"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "tributeRecordId",
+        "in": "path",
+        "description": "tributeRecordId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

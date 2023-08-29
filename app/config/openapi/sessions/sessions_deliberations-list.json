@@ -1,0 +1,99 @@
+{
+  "summary": "List sessions_deliberations",
+  "get": {
+    "tags": [
+      "sessions_deliberations"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to list a record ",
+    "operationId": "sessions_deliberations-list",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sessions_deliberations": {
+                  "type": "array",
+                  "items": {
+                    "idSessionDeliberation": {
+                      "type": "integer"
+                    },
+                    "idSession": {
+                      "type": "integer"
+                    },
+                    "deliberationNumber": {
+                      "type": "integer"
+                    },
+                    "deliberationYear": {
+                      "type": "string"
+                    },
+                    "deliberationObject": {
+                      "type": "string"
+                    },
+                    "startTime": {
+                      "type": "string"
+                    },
+                    "endTime": {
+                      "type": "string"
+                    },
+                    "deliberationPreface": {
+                      "type": "string"
+                    },
+                    "deliberationText": {
+                      "type": "string"
+                    },
+                    "idCreator": {
+                      "type": "integer"
+                    },
+                    "created": {
+                      "type": "string"
+                    },
+                    "idModifier": {
+                      "type": "integer"
+                    },
+                    "modified": {
+                      "type": "string"
+                    },
+                    "archived": {
+                      "type": "string"
+                    },
+                    "deleted": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "sessionsDeliberationsId",
+        "in": "path",
+        "description": "sessionsDeliberationsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

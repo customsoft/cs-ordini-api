@@ -1,0 +1,79 @@
+{
+  "summary": "Get users_emails_verification",
+  "get": {
+    "tags": [
+      "users_emails_verification"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "users_emails_verification-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idUserEmailVerification": {
+                  "type": "integer"
+                },
+                "idUserEmail": {
+                  "type": "integer"
+                },
+                "verificationCode": {
+                  "type": "string"
+                },
+                "verified": {
+                  "type": "string"
+                },
+                "lastStatus": {
+                  "type": "string"
+                },
+                "dateLastStatus": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "usersEmailsVerificationId",
+        "in": "path",
+        "description": "usersEmailsVerificationId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "summary": "Add users_pages",
+  "post": {
+    "tags": [
+      "users_pages"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to add a record ",
+    "operationId": "users_pages-add",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idUserPage": {
+                  "type": "integer"
+                },
+                "idParentPage": {
+                  "type": "integer"
+                },
+                "idTypePage": {
+                  "type": "integer"
+                },
+                "page": {
+                  "type": "string"
+                },
+                "accessKey": {
+                  "type": "string"
+                },
+                "idStatus": {
+                  "type": "integer"
+                },
+                "namePage": {
+                  "type": "string"
+                },
+                "urlPage": {
+                  "type": "string"
+                },
+                "actionsPage": {
+                  "type": "string"
+                },
+                "shortDescription": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "defaultFilter": {
+                  "type": "string"
+                },
+                "sortField": {
+                  "type": "integer"
+                },
+                "idCreator": {
+                  "type": "integer"
+                },
+                "created": {
+                  "type": "string"
+                },
+                "idModifier": {
+                  "type": "integer"
+                },
+                "modified": {
+                  "type": "string"
+                },
+                "archived": {
+                  "type": "string"
+                },
+                "deleted": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "requestBody": {
+      "content": {
+        "application\/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "idParentPage": {
+                "type": "integer"
+              },
+              "idTypePage": {
+                "type": "integer"
+              },
+              "page": {
+                "type": "string"
+              },
+              "accessKey": {
+                "type": "string"
+              },
+              "idStatus": {
+                "type": "integer"
+              },
+              "namePage": {
+                "type": "string"
+              },
+              "urlPage": {
+                "type": "string"
+              },
+              "actionsPage": {
+                "type": "string"
+              },
+              "shortDescription": {
+                "type": "string"
+              },
+              "longDescription": {
+                "type": "string"
+              },
+              "defaultFilter": {
+                "type": "string"
+              },
+              "sortField": {
+                "type": "integer"
+              },
+              "idCreator": {
+                "type": "integer"
+              },
+              "created": {
+                "type": "string"
+              },
+              "idModifier": {
+                "type": "integer"
+              },
+              "modified": {
+                "type": "string"
+              },
+              "archived": {
+                "type": "string"
+              },
+              "deleted": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

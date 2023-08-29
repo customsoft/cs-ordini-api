@@ -1,0 +1,70 @@
+{
+  "summary": "Get hotstudio_registry",
+  "get": {
+    "tags": [
+      "hotstudio_registry"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "hotstudio_registry-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "iDAZ": {
+                  "type": "string"
+                },
+                "tIPO": {
+                  "type": "string"
+                },
+                "HS_RAGSOCIALE": {
+                  "type": "string"
+                },
+                "HS_INDIRIZZO": {
+                  "type": "string"
+                },
+                "HS_CAP": {
+                  "type": "string"
+                },
+                "nOTE": {
+                  "type": "string"
+                },
+                "HS_LOCALITA": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "hotstudioRegistryId",
+        "in": "path",
+        "description": "hotstudioRegistryId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}

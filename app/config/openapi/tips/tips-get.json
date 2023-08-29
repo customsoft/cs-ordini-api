@@ -1,0 +1,64 @@
+{
+  "summary": "Get tips",
+  "get": {
+    "tags": [
+      "tips"
+    ],
+    "security": [
+      {
+        "bearerAuth": []
+      }
+    ],
+    "description": "Allow to get a record ",
+    "operationId": "tips-get",
+    "responses": {
+      "200": {
+        "content": {
+          "application\/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idTip": {
+                  "type": "integer"
+                },
+                "titleTip": {
+                  "type": "string"
+                },
+                "tip": {
+                  "type": "string"
+                },
+                "scriptJS": {
+                  "type": "string"
+                },
+                "created": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized: Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Errors"
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "name": "tipsId",
+        "in": "path",
+        "description": "tipsId to get information.",
+        "required": true,
+        "schema": [
+          "type=>integer"
+        ]
+      }
+    ]
+  }
+}
